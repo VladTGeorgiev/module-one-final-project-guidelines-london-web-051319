@@ -1,6 +1,8 @@
 # CURATED
 def update_user(user)
-  puts "-- Enter new title to change your name | Type 'back' for main menu --"
+  puts "\n"
+  puts "  SI: -- Enter new title to change your name | Type 'back' for main menu --".colorize(:cyan)
+  puts "\n"
   inp = gets.chomp
 
   loop do
@@ -31,7 +33,7 @@ end
 def list_curated_articles
   articles = Article.where(curated: true)
   curated_titles = []
-  articles.each_with_index {|article, index| curated_titles << "#{index+1}. #{article.title}"}
+  articles.each_with_index {|article, index| curated_titles << "  #{index+1}. #{article.title}".colorize(:yelloe)}
 
   print_curated_heading_and_titles(curated_titles)
 end
@@ -98,7 +100,8 @@ def remove_fav(user)
       print_article_removed
     else
       puts "\n"
-      puts "Cant delete nothing, can you? Stupid -.-"
+      puts "  SI: -- Can't delete nothing, can you? Silly -.- --".colorize(:red)
+      puts "\n"
     end
   elsif user_input == "n"
     print_article_not_removed
@@ -109,14 +112,13 @@ def remove_fav(user)
     user_input = gets.chomp
   end
   print_press_enter
-
 end
 
 def search(user)
   print_search_intro
   searched_name = gets.chomp
   searched_name.downcase!
-  article_arr = Article.all.select {|article| article.title.downcase.index(searched_name) }
+  article_arr = Article.all.select {|article| article.title.downcase.index(searched_name)}
 
   search_logic(searched_name, article_arr, user)
 end
@@ -128,7 +130,7 @@ def favourites(user)
   article_arr = list.map {|fav| Article.find_by(id: fav.article_id)}
   print_fav_heading
 
-  article_arr.each_with_index {|article, index| puts "#{index+1}. #{article.title}\n\n"}
+  article_arr.each_with_index {|article, index| puts "  #{index+1}. #{article.title}\n".colorize(:yellow)}
   choose_by_number(article_arr, user)
 end
 

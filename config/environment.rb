@@ -2,6 +2,8 @@ require 'bundler'
 require "open-uri"
 require "json"
 require "net/http"
+require "colorize"
+require 'colorized_string'
 
 Bundler.require
 

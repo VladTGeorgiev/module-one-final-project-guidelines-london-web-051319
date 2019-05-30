@@ -7,8 +7,3 @@ task :console do
   Pry.start
 end
 
-# desc 'test fucntions'
-#   task :deftest do
-#
-#   end
-# end

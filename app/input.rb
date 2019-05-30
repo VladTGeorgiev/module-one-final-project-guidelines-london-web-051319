@@ -1,6 +1,8 @@
 def input(user)
   puts "\n"
-  puts "-- Please enter a valid command or alternatively use the 'help' keyword for all options. --"
+  puts "  ==================================================================================================================================".colorize(:cyan)
+  puts "  ---------------- MAIN MENU: Please enter a valid command or alternatively use the 'help' keyword for all options. ----------------".colorize(:cyan)
+  puts "  ==================================================================================================================================".colorize(:cyan)
   puts "\n"
   loop do
     user_input = gets.chomp
@@ -30,7 +32,11 @@ def input(user)
     when '0'
       exit
     else
-      puts "-- Please enter a valid command or alternatively use the 'help' keyword for all options. --"
+      puts "\n"
+      puts "  ==================================================================================================================================".colorize(:cyan)
+      puts "  --------------- MAIN MENU: Please enter a valid command or alternatively use the 'help' keyword for all options. -----------------".colorize(:cyan)
+      puts "  ==================================================================================================================================".colorize(:cyan)
+      puts "\n"
     end
   end
 end
