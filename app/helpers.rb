@@ -105,6 +105,8 @@ def aiod_check_add_to_db(article, json, user)
     new_article = Article.create(title: json["title"], date: json["date"], overview: json["explanation"], curated: false)
     user.article_id = new_article.id
     puts "\n"
+  else
+    user.article_id = article.id
   end
 end
 
