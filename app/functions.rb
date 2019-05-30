@@ -107,31 +107,10 @@ end
 def search(user)
   print_search_intro
   searched_name = gets.chomp
-  puts "\n"
   searched_name.downcase!
   article_arr = Article.all.select {|article| article.title.downcase.index(searched_name) }
-  puts "\n"
 
-  #binding.pry
-  loop do
-    if searched_name != "" && searched_name != "back"
-      if !article_arr.empty?
-        article_arr.each_with_index do |article, index|
-          puts "#{index+1}. #{article.title.upcase}\n\n"
-        end
-        choose_by_number(article_arr, user)
-        break
-        else
-          print_search_error
-      end
-    elsif searched_name == "back"
-      print_press_enter
-      break
-    else
-      puts "Invalid search term -- try again or type back for main menu"
-      searched_name = gets.chomp
-    end
-  end
+  search_logic(searched_name, article_arr, user)
 end
 
 

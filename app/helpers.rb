@@ -44,6 +44,8 @@ def print_article(article)
   puts "\n"
   puts article.title.upcase
   puts "\n"
+  puts article.date.upcase
+  puts "\n"
   puts article.overview.gsub("\n","")
   puts "\n"
   puts "Press Enter For Main Menu"
@@ -166,6 +168,28 @@ def print_search_error
   puts "\n"
   puts "-- ERROR 404! No articles found with this search term --"
   puts "\n"
+end
+
+def search_logic(searched_name, article_arr, user)
+  loop do
+    if searched_name != "" && searched_name != "back"
+      if !article_arr.empty?
+        article_arr.each_with_index do |article, index|
+          puts "#{index+1}. #{article.title.upcase}\n\n"
+        end
+        choose_by_number(article_arr, user)
+        break
+        else
+          print_search_error
+      end
+    elsif searched_name == "back"
+      print_press_enter
+      break
+    else
+      puts "Invalid search term -- try again or type back for main menu"
+      searched_name = gets.chomp
+    end
+  end
 end
 
 # favourites
