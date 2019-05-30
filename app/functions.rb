@@ -147,3 +147,22 @@ def help
   menu_entry_9
   puts "\n"
 end
+
+def sign_in(username, user)
+ loop do
+    user = find_user(username)
+    if username == ""
+      puts " SI: -- Please type your name to enter the SpaceShuttle"
+      puts "\n"
+      username = gets.chomp
+    end
+
+    if !user
+      user = User.create(username: username)
+      break
+    elsif user
+      break
+    end
+  end
+ user
+end

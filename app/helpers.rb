@@ -285,6 +285,11 @@ def replace_inner_html_for_overview(article)
   overview
 end
 
+# RUN
+def find_user(username)
+  User.find_by(username: username)
+end
+
 def menu_entry_0
   puts "\n"
   puts "|'0' - terminates the app".colorize(:cyan)
