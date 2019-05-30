@@ -139,6 +139,7 @@ def help
   menu_entry_1
   menu_entry_2
   menu_entry_3
+  menu_entry_4
   menu_entry_5
   menu_entry_6
   menu_entry_7
