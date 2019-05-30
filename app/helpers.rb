@@ -262,3 +262,53 @@ def article_iterator(user_num, len, article_arr, user)
     end
   end
 end
+
+def menu_entry_0
+  puts "\n"
+  puts "|'0' - terminates the app"
+end
+
+def menu_entry_1
+  puts "\n"
+  puts "|'1' - gives the option to search through all articles"
+end
+
+def menu_entry_2
+  puts "\n"
+  puts "|'2' - adds the selected article to the user's favourites list"
+end
+
+def menu_entry_3
+  puts "\n"
+  puts "|'3' - removes the selected article from the user's favourites list"  
+end
+
+def menu_entry_4
+  puts "\n"
+  puts "|'4' - user's current list of favourite articles"
+end
+
+def menu_entry_5
+  puts "\n"
+  puts "|'5' - pulls an article from NASA's Astronomy Photo of the Day website about the featured photo"
+end
+
+def menu_entry_6
+  puts "\n"
+  puts "|'6' - prints the article that has the most favourites"
+end
+
+def menu_entry_7
+  puts "\n"
+  puts "|'7' - prints out the article with the longest description"
+end
+
+def menu_entry_8
+  puts "\n"
+  puts "|'8' - lists a number of curated articles"
+end
+
+def menu_entry_9
+  puts "\n"
+  puts "|'9' - to change your name"
+end
