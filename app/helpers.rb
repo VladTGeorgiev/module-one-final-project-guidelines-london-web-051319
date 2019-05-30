@@ -206,3 +206,35 @@ def greeting
   puts "-- Welcome SpaceTraveller! Please enter your username:-- "
   puts "\n"
 end
+
+def choose_by_number(article_arr, user)
+  puts "\n"
+  puts "-- Choose the article that you would like to read by typing its number or press Enter to return to main menu --"
+  puts "\n"
+
+  user_input = gets.chomp
+  user_num = user_input.to_i
+  len = article_arr.size
+  article_iterator(user_num, len, article_arr, user)
+end
+
+def article_iterator(user_num, len, article_arr, user)
+  loop do
+    if user_num.is_a? Integer
+      if user_num <= len && user_num > 0
+        num = user_num - 1
+        article = article_arr[num]
+        user.article_id = article.id
+        print_article(article)
+        break if article
+      elsif len == 0
+        choose_by_number_error
+        break
+      else
+        puts "\n\n-- Enter Value Between 1 and #{len} --"
+        user_input = gets.chomp
+        user_num = user_input.to_i
+      end
+    end
+  end
+end
