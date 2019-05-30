@@ -1,6 +1,6 @@
 # CURATED
 def update_user(user)
-  puts "-- Enter new title to change your name --"
+  puts "-- Enter new title to change your name | Type 'back' for main menu --"
   inp = gets.chomp
 
   loop do
@@ -8,6 +8,11 @@ def update_user(user)
     if userExist
       print_user_taken
       inp = gets.chomp
+    end
+
+    if inp == "back"
+      print_press_enter
+      break
     else
       save_user(user, inp)
       break
