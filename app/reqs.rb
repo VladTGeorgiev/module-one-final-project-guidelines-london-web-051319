@@ -7,6 +7,7 @@ require "require_all"
 require "activerecord"
 
 $LOAD_PATH.unshift('.')
+require_relative "article_data/json_read_write.rb"
 require_relative "article_data/planets.rb"
 require_relative "article_data/comets.rb"
 require_relative "article_data/meteors.rb"
