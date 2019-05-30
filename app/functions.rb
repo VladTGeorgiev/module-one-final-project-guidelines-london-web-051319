@@ -70,7 +70,6 @@ def aiod(user)
   artExist = Article.find_by(title: json["title"])
 
   aiod_check_add_to_db(artExist, json, user)
-  user.article_id = artExist.id
 end
 
 def add_to_fav(user)
