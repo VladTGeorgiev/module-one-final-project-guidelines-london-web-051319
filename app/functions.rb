@@ -1,7 +1,7 @@
 # CURATED
 def update_user(user)
   puts "\n"
-  puts "-- Enter new title to change your name | Type 'back' for main menu --".colorize(:cyan)
+  puts "  SI: -- Enter new title to change your name | Type 'back' for main menu --".colorize(:cyan)
   puts "\n"
   inp = gets.chomp
 
@@ -101,7 +101,7 @@ def remove_fav(user)
       print_article_removed
     else
       puts "\n"
-      puts "  -- Can't delete nothing, can you? Stupid -.- --".colorize(:red)
+      puts "  SI: -- Can't delete nothing, can you? Silly -.- --".colorize(:red)
       puts "\n"
     end
   elsif user_input == "n"

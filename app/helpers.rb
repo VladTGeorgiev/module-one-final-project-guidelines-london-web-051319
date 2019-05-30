@@ -2,7 +2,7 @@
 
 def print_user_taken
   puts "\n"
-  puts "-- This name is taken. Please choose another name. --".colorize(:magenta)
+  puts "  SI: -- This name is taken. Please choose another name. --".colorize(:magenta)
   puts "\n"
   print_press_enter
   puts "\n"
@@ -10,7 +10,7 @@ end
 
 def print_user_saved(inp)
   puts "\n"
-  puts "-- Your new name is #{inp} --".colorize(:cyan)
+  puts "  SI: -- Your new name is #{inp} --".colorize(:cyan)
   puts "\n"
   print_press_enter
   puts "\n"
@@ -51,7 +51,7 @@ def print_article(article)
   puts "\n"
   puts "  #{article.overview.gsub("\n","")}"
   puts "\n"
-  puts "Press Enter For Main Menu".colorize(:cyan)
+  puts "  SI: -- Press Enter For Main Menu --".colorize(:cyan)
   puts "\n"
 end
 
@@ -86,7 +86,7 @@ end
 def print_aiod_heading
   puts "\n"
   puts "  ==================================================================================================================================".colorize(:cyan)
-  puts "  ------------------------------------------ A S T R O N O M Y  I N F O  O F  T H E  D A Y -----------------------------------------".colorize(:cyan)
+  puts "  ------------------------------------------- A S T R O N O M Y  I N F O  O F  T H E  D A Y ----------------------------------------".colorize(:cyan)
   puts "  ==================================================================================================================================".colorize(:cyan)
   puts "\n"
 end
@@ -117,19 +117,19 @@ end
 # ADD TO Favourite
 def print_add_to_favourites
   puts "\n"
-  puts "-- Added to your favourites --".colorize(:cyan)
+  puts "  SI: -- Added to your favourites --".colorize(:cyan)
   puts "\n"
   print_press_enter
 end
 
 def print_article_error
-  puts "-- Cannot Add This Article --".colorize(:magenta)
+  puts "  SI: -- Cannot Add This Article --".colorize(:magenta)
   print_press_enter
 end
 
 def print_article_exist
   puts "\n"
-  puts "-- This is already in your collections of favourites --".colorize(:magenta)
+  puts "  SI: -- This is already in your collections of favourites --".colorize(:magenta)
   puts "\n"
   print_press_enter
   puts "\n"
@@ -139,25 +139,25 @@ end
 
 def print_are_you_sure
   puts "\n"
-  puts "-- Are you sure you want to REMOVE this article from your favourites? (y/n) --".colorize(:magenta)
+  puts "  SI: -- Are you sure you want to REMOVE this article from your favourites? (y/n) --".colorize(:magenta)
   puts "\n"
 end
 
 def print_article_removed
   puts "\n"
-  puts "-- Article removed from favourites --".colorize(:magenta)
+  puts "  SI: -- Article removed from favourites --".colorize(:magenta)
   puts "\n"
 end
 
 def print_article_not_removed
   puts "\n"
-  puts "-- Article not removed from favourites --".colorize(:cyan)
+  puts "  SI: -- Article not removed from favourites --".colorize(:cyan)
   puts "\n"
 end
 
 def print_enter_valid_command
   puts "\n"
-  puts "-- Enter valid command or type 0 to close --".colorize(:yellow)
+  puts "  SI: -- Enter valid command or type 0 to close --".colorize(:yellow)
   puts "\n"
 end
 
@@ -165,13 +165,13 @@ end
 # SEARCHs
 def print_search_intro
   puts "\n"
-  puts "-- Please enter the name of the object you would like to read about. --".colorize(:cyan)
+  puts "  SI: -- Please enter the name of the object you would like to read about. --".colorize(:cyan)
   puts "\n"
 end
 
 def print_search_error
   puts "\n"
-  puts "-- ERROR 404! No articles found with this search term --".colorize(:color => :yellow, :background => :red)
+  puts "  SI: -- ERROR 404! No articles found with this search term --".colorize(:color => :yellow, :background => :red)
   puts "\n"
 end
 
@@ -195,7 +195,7 @@ def search_logic(searched_name, article_arr, user)
       break
     else
       puts "\n"
-      puts "Invalid search term -- try again or type back for main menu".colorize(:magenta)
+      puts "  SI: -- Invalid search term -- try again or type back for main menu --".colorize(:magenta)
       puts "\n"
       searched_name = gets.chomp
     end
@@ -214,14 +214,14 @@ end
 # choose by number
 def choose_by_number_error
   puts "\n"
-  puts "-- No Articles in here :( Add some plox!!! --".colorize(:yellow)
+  puts "  SI: -- No Articles in here :( Add some plox!!! --".colorize(:yellow)
   print_press_enter
   puts "\n"
 end
 
 def print_press_enter
   puts "\n"
-  puts "-- Press Enter For Main Menu --".colorize(:cyan)
+  puts "  SI: -- Press Enter For Main Menu --".colorize(:cyan)
   puts "\n"
 end
 
@@ -246,7 +246,7 @@ end
 
 def choose_by_number(article_arr, user)
   puts "\n"
-  puts "-- Choose the article that you would like to read by typing its number or press Enter to return to main menu --".colorize(:cyan)
+  puts "  SI: -- Choose the article that you would like to read by typing its number or press Enter to return to main menu --".colorize(:cyan)
   puts "\n"
 
   user_input = gets.chomp
@@ -268,7 +268,7 @@ def article_iterator(user_num, len, article_arr, user)
         choose_by_number_error
         break
       else
-        puts "\n-- Enter Value Between 1 and #{len} --".colorize(:magenta)
+        puts "\n  AI: -- Enter Value Between 1 and #{len} --".colorize(:magenta)
         user_input = gets.chomp
         user_num = user_input.to_i
       end
