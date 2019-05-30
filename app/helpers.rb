@@ -171,7 +171,7 @@ end
 
 def print_search_error
   puts "\n"
-  puts "  SI: -- ERROR 404! No articles found with this search term --".colorize(:color => :yellow, :background => :red)
+  puts "  SI: -- ERROR 404! No articles found with this search term. Please, use a different term. --".colorize(:color => :yellow, :background => :red)
   puts "\n"
 end
 

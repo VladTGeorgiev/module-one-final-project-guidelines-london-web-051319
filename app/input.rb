@@ -34,7 +34,7 @@ def input(user)
     else
       puts "\n"
       puts "  ==================================================================================================================================".colorize(:cyan)
-      puts "  --------------- MAIN MENU: Please enter a valid command or alternatively use the 'help' keyword for all options. ----------------".colorize(:cyan)
+      puts "  --------------- MAIN MENU: Please enter a valid command or alternatively use the 'help' keyword for all options. -----------------".colorize(:cyan)
       puts "  ==================================================================================================================================".colorize(:cyan)
       puts "\n"
     end
