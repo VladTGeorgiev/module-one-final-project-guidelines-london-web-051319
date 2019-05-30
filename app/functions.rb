@@ -146,25 +146,14 @@ def favourites(user)
 end
 
 def help
-  puts "\n"
-  puts "|'0' - terminates the app"
-  puts "\n"
-  puts "|'1' - gives the option to search through all articles"
-  puts "\n"
-  puts "|'2' - adds the selected article to the user's favourites list"
-  puts "\n"
-  puts "|'3' - removes the selected article from the user's favourites list"
-  puts "\n"
-  puts "|'4' - user's current list of favourite articles"
-  puts "\n"
-  puts "|'5' - pulls an article from NASA's Astronomy Photo of the Day website about the featured photo"
-  puts "\n"
-  puts "|'6' - prints the article that has the most favourites"
-  puts "\n"
-  puts "|'7' - prints out the article with the longest description"
-  puts "\n"
-  puts "|'8' - lists a number of curated articles"
-  puts "\n"
-  puts "|'9' - to change your name"
+  menu_entry_0
+  menu_entry_1
+  menu_entry_2
+  menu_entry_3
+  menu_entry_5
+  menu_entry_6
+  menu_entry_7
+  menu_entry_8
+  menu_entry_9
   puts "\n"
 end
