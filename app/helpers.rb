@@ -45,7 +45,7 @@ def print_article(article)
   puts "\n"
   puts article.date.upcase
   puts "\n"
-  puts article.overview.gsub("\n","")
+  puts replace_inner_html_for_overview(article)
   puts "\n"
   puts "Press Enter For Main Menu"
   puts "\n"
@@ -262,6 +262,13 @@ def article_iterator(user_num, len, article_arr, user)
       end
     end
   end
+end
+
+# Nokogiri
+def replace_inner_html_for_overview(article)
+  overview = article.overview
+  overview.gsub!(/<[^>]*>/, "")
+  overview
 end
 
 def menu_entry_0

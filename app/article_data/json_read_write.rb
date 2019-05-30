@@ -8,8 +8,9 @@ def get_overview(document)
   div = document.css(".wysiwyg_content")
   para = div.css("p").inner_html
   index = para.index("Go farther")
-  index.to_i - 1
-  overview = para[0..index] # taking off html tags
+  n = index.to_i - 1
+
+  overview = para[0..n] # taking off html tags
   overview.gsub(/<[^>]*>/, "")
   overview
 end
