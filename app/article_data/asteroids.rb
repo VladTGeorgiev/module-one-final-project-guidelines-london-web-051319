@@ -1,3 +1,5 @@
+require_relative ""
+
 def curate_asteroids
   category = "asteroid"
   json_hash = read_hash
@@ -11,7 +13,7 @@ def curate_asteroids
   hashify(planet_data, category, date, overview)
 
   json_hash["curated"] << planet_data
-  write_to_json(json_hash)
+  #write_to_json(json_hash)
 end
 
 curate_asteroids

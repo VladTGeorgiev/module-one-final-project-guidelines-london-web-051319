@@ -183,6 +183,8 @@ def search_logic(searched_name, article_arr, user)
         break
         else
           print_search_error
+          print_press_enter
+          break
       end
     elsif searched_name == "back"
       print_press_enter
