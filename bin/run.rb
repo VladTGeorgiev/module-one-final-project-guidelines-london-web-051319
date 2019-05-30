@@ -13,3 +13,4 @@ puts "  SI: -- I am Space Intelligence, or for short SI! I will be your host for
 puts ""
 user_obj = Input.new(user.id)
 input(user_obj)
+ 
