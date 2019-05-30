@@ -181,6 +181,8 @@ def search_logic(searched_name, article_arr, user)
         break
         else
           print_search_error
+          print_press_enter
+          break
       end
     elsif searched_name == "back"
       print_press_enter
@@ -280,7 +282,7 @@ end
 
 def menu_entry_3
   puts "\n"
-  puts "|'3' - removes the selected article from the user's favourites list"  
+  puts "|'3' - removes the selected article from the user's favourites list"
 end
 
 def menu_entry_4
