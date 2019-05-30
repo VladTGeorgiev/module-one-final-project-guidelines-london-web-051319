@@ -88,9 +88,14 @@ def remove_fav(user)
   user_input = gets.chomp
 
   if user_input == "y"
-    fav = Favourite.find_by(article_id: user.article_id, user_id: user.user_id)
-    fav.destroy
-    print_article_removed
+      fav = Favourite.find_by(article_id: user.article_id, user_id: user.user_id)
+    if fav
+      fav.destroy
+      print_article_removed
+    else
+      puts "\n"
+      puts "Cant delete nothing, can you? Stupid -.-"
+    end
   elsif user_input == "n"
     print_article_not_removed
   elsif user_input == "0"

@@ -7,6 +7,7 @@ end
 def get_overview(document)
   div = document.css(".wysiwyg_content")
   overview = div.css("p").text
+  binding.pry
   overview
 end
 
