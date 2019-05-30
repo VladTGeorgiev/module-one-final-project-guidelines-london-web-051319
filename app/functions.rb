@@ -10,7 +10,6 @@ def update_user(user)
       inp = gets.chomp
     else
       save_user(user, inp)
-      print_user_saved(inp)
       break
     end
   end
