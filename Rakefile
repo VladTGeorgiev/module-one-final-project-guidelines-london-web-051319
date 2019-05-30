@@ -6,3 +6,9 @@ task :console do
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   Pry.start
 end
+
+# desc 'test fucntions'
+#   task :deftest do
+#
+#   end
+# end
