@@ -9,7 +9,7 @@ require_relative '../config/environment.rb'
    end
 
    puts "\n"
-   puts "-- Hello, #{username}! --"
+   puts "-- Hello, #{username}! --".colorize(:cyan)
 
    user_obj = Input.new(user.id)
    input(user_obj)
