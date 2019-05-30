@@ -24,7 +24,7 @@ def print_curated_article_overview(user)
   puts "\n\n"
   article_arr = Article.where(curated: true)
   curated_overview = []
-  article_arr.each {|article| curated_overview << "#{article.overview}"}
+  article_arr.each {|article| curated_overview << "#{article.overview.gsub(/<[^>]*>/, '')}"}
   choose_by_number(article_arr, user)
 end
 
