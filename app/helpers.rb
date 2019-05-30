@@ -1,5 +1,4 @@
 # USER UPDATE
-
 def print_user_taken
   puts "\n"
   puts "-- This name is taken. Please choose another name. --"

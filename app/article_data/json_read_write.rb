@@ -6,9 +6,12 @@ end
 
 def get_overview(document)
   div = document.css(".wysiwyg_content")
-  overview = div.css("p").text
-  binding.pry
+  para = div.css("p").inner_html
+  index = (para.index("Go farther") - 1)
+  overview = para[0..index] # taking off html tags
+  overview.gsub(/<[^>]*>/, "")
   overview
+  binding.pry
 end
 
 def write_to_json(hash)

@@ -1,4 +1,7 @@
-require_relative ""
+require_relative "./json_read_write.rb"
+require "json"
+require "nokogiri"
+require "net/http"
 
 def curate_asteroids
   category = "asteroid"
@@ -6,7 +9,7 @@ def curate_asteroids
   planet_data = {}
   url = open("https://solarsystem.nasa.gov/asteroids-comets-and-meteors/asteroids/overview/")
   document = Nokogiri::HTML(url)
-
+  
   date = get_date(document)
   overview = get_overview(document)
 
