@@ -49,7 +49,7 @@ def print_article(article)
   puts "\n"
   puts "  DATE: #{article.date.upcase}".colorize(:yellow)
   puts "\n"
-  puts "  #{article.overview.gsub("\n","")}"
+  puts "  #{replace_)}"
   puts "\n"
   puts "  SI: -- Press Enter For Main Menu --".colorize(:cyan)
   puts "\n"
@@ -97,6 +97,7 @@ def print_aiod_article(title, date, overview)
   DATE: #{date}".colorize(:yellow)
   puts "\n"
   puts "  #{overview}"
+  puts "\n"
 end
 
 def parse_aiod_url
