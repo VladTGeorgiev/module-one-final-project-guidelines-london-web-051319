@@ -157,7 +157,7 @@ end
 
 def print_article_not_removed
   puts "\n"
-  puts "  SI: -- Article not removed from favourites --".colorize(:cyan)
+  puts "  SI: -- Article not removed from favourites --".colorize(:magenta)
   puts "\n"
 end
 
@@ -226,14 +226,14 @@ end
 # choose by number
 def choose_by_number_error
   puts "\n"
-  puts "  SI: -- No Articles in here :( Add some plox!!! --".colorize(:yellow)
+  puts "  SI: -- No articles in here :( Add some plox!!! --".colorize(:yellow)
   print_press_enter
   puts "\n"
 end
 
 def print_press_enter
   puts "\n"
-  puts "  SI: -- Press Enter For Main menu --".colorize(:cyan)
+  puts "  SI: -- Press Enter for Main menu --".colorize(:cyan)
   puts "\n"
 end
 
