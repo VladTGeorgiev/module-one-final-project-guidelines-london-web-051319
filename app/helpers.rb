@@ -201,7 +201,7 @@ def search_logic(searched_name, article_arr, user)
       break
     else
       puts "\n"
-      puts "  SI: -- Invalid search term -- try again or type back for main menu --".colorize(:magenta)
+      puts "  SI: -- Invalid search term -- try again or type 'back' for main menu --".colorize(:magenta)
       puts "\n"
       searched_name = gets.chomp
     end
