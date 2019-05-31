@@ -33,7 +33,7 @@ end
 def list_curated_articles
   articles = Article.where(curated: true)
   curated_titles = []
-  articles.each_with_index {|article, index| curated_titles << "  #{index+1}. #{article.title}".colorize(:yelloe)}
+  articles.each_with_index {|article, index| curated_titles << "  #{index+1}. #{article.title}".colorize(:yellow)}
 
   print_curated_heading_and_titles(curated_titles)
 end

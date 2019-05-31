@@ -169,7 +169,7 @@ end
 
 def remove_error_empty_fav_list
   puts "\n"
-  puts "  SI: -- Can't delete nothing, can you? Silly -.- --".colorize(:red)
+  puts "  SI: -- Can't delete nothing, can you? Silly... -.- --".colorize(:magenta)
   puts "\n"
 end
 
@@ -183,7 +183,7 @@ end
 
 def print_search_error
   puts "\n"
-  puts "  SI: -- ERROR 404! No articles found with this search term. Please, use a different term. --".colorize(:color => :yellow, :background => :red)
+  puts "  SI: -- ERROR 404! No articles found with this search term. Please, use a different term. --".colorize(:color => :yellow, :background => :red).blink
   puts "\n"
 end
 
