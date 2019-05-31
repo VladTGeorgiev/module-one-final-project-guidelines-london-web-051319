@@ -146,24 +146,17 @@ def help
   puts "\n"
 end
 
+
 def sign_in(username, user)
-     loop do
-        if username == ""
-          puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
-          puts "\n"
-          username = gets.chomp
-        elsif username 
-          user = find_user(username)
-          username = user.username
-          user_greeting(username)
-          break
-        elsif !username
-          user = User.create(username: username)
-          username = user.username
-          ser_greeting(username)
-          break
-        end
+   loop do
+      if username == ""
+        puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
+        puts "\n"
+        username = gets.chomp
+      else
         user
       end
+      user
+    end
   user
 end
