@@ -167,6 +167,12 @@ def print_enter_valid_command
   puts "\n"
 end
 
+def remove_error_empty_fav_list
+  puts "\n"
+  puts "  SI: -- Can't delete nothing, can you? Silly -.- --".colorize(:red)
+  puts "\n"
+end
+
 
 # SEARCHs
 def print_search_intro

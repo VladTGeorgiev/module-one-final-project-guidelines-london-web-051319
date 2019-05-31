@@ -99,9 +99,7 @@ def remove_fav(user)
       fav.destroy
       print_article_removed
     else
-      puts "\n"
-      puts "  SI: -- Can't delete nothing, can you? Silly -.- --".colorize(:red)
-      puts "\n"
+      remove_error_empty_fav_list
     end
   elsif user_input == "n"
     print_article_not_removed
