@@ -90,12 +90,16 @@ def print_aiod_heading
   puts "\n"
 end
 
-def print_aiod_article(title, date, overview)
+def print_aiod_article(title, date, overview, url)
   puts "
   TITLE: #{title.upcase!}'\n
   DATE: #{date}".colorize(:yellow)
   puts "\n"
   puts "  #{overview}"
+  puts "\n"
+  puts "  SI: -- Rigth click on the link below to to open a photo of the object in your browser.-- "
+  puts "\n"
+  puts " #{url}"
   puts "\n"
 end
 

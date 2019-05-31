@@ -68,7 +68,7 @@ end
 def aiod(user)
   json = parse_aiod_url
   print_aiod_heading
-  print_aiod_article(json["title"], json["date"], json["explanation"])
+  print_aiod_article(json["title"], json["date"], json["explanation"], json["url"])
   artExist = Article.find_by(title: json["title"])
 
   aiod_check_add_to_db(artExist, json, user)
