@@ -9,7 +9,7 @@ end
 
 def print_user_saved(inp)
   puts "\n"
-  puts "  SI: -- Your new name is #{inp} --".colorize(:cyan)
+  puts "  SI: -- Your new name is #{inp} --".colorize(:magenta)
   puts "\n"
   print_press_enter
   puts "\n"
