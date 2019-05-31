@@ -349,3 +349,10 @@ def menu_entry_9
   puts "\n"
   puts "|'9' - to change your name".colorize(:cyan)
 end
+
+def user_greeting(username)
+  puts "\n"
+  puts "  SI: -- Hello, #{username}! --".colorize(:cyan)
+  puts "  SI: -- I am Space Intelligence, or for short SI! I will be your host for your space journey today.".colorize(:cyan)
+  puts "\n"
+end 
