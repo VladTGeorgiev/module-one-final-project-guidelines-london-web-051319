@@ -97,9 +97,9 @@ def print_aiod_article(title, date, overview, url)
   puts "\n"
   puts "  #{overview}"
   puts "\n"
-  puts "  SI: -- Rigth click on the link below to to open a photo of the object in your browser.-- "
+  puts "  SI: -- Rigth click on the link below to to open a photo of the object in your browser.-- ".colorize(:cyan)
   puts "\n"
-  puts " #{url}"
+  puts "  "+"#{url}".underline
   puts "\n"
 end
 

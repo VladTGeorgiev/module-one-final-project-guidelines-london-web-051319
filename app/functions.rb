@@ -150,7 +150,7 @@ def sign_in(username, user)
  loop do
     user = find_user(username)
     if username == ""
-      puts " SI: -- Please type your name to enter the SpaceShuttle"
+      puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
       puts "\n"
       username = gets.chomp
     end
