@@ -355,4 +355,4 @@ def user_greeting(username)
   puts "  SI: -- Hello, #{username}! --".colorize(:cyan)
   puts "  SI: -- I am Space Intelligence, or for short SI! I will be your host for your space journey today.".colorize(:cyan)
   puts "\n"
-end 
+end

@@ -154,7 +154,9 @@ def sign_in(username, user)
         puts "\n"
         username = gets.chomp
       else
-        user
+        user = User.find_by(username: username) || User.create(username: username)
+        user_greeting(username)
+        break
       end
       user
     end
