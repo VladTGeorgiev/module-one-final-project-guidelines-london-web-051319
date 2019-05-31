@@ -1,4 +1,4 @@
-# CURATED
+# UPDATE USER NAME
 def update_user(user)
   puts "\n"
   puts "  SI: -- Enter new title to change your name | Type 'back' for main menu --".colorize(:cyan)
@@ -6,13 +6,15 @@ def update_user(user)
   inp = gets.chomp
 
   loop do
-    userExist = User.find_by(username: inp)
-    if userExist
+    if inp == ""
+      puts " SI: -- Please enter a valid name".colorize(:magenta)
+      puts "\n"
+      inp = gets.chomp
+    elsif
+      userExist = User.find_by(username: inp)
       print_user_taken
       inp = gets.chomp
-    end
-
-    if inp == "back"
+    elsif inp == "back"
       print_press_enter
       break
     else
@@ -22,6 +24,7 @@ def update_user(user)
   end
 end
 
+# CURATED
 def print_curated_article_overview(user)
   puts "\n\n"
   article_arr = Article.where(curated: true)
@@ -148,6 +151,7 @@ end
 
 
 def sign_in(username, user)
+<<<<<<< HEAD
    loop do
       if username == ""
         puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
@@ -162,3 +166,24 @@ def sign_in(username, user)
     end
   user
 end
+=======
+  loop do
+     user = find_user(username)
+     if username == ""
+       puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
+       puts "\n"
+       username = gets.chomp
+     elsif username 
+        user = find_user(username)
+        username = user.username
+        user_greeting(username)
+        break
+     elsif !username
+        user = User.create(username: username)
+        user_greeting(username)
+        break
+     end
+   end
+  user
+ end
+>>>>>>> origin/dev

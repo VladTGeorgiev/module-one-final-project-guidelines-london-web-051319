@@ -9,7 +9,7 @@ end
 
 def print_user_saved(inp)
   puts "\n"
-  puts "  SI: -- Your new name is #{inp} --".colorize(:cyan)
+  puts "  SI: -- Your new name is #{inp} --".colorize(:magenta)
   puts "\n"
   print_press_enter
   puts "\n"
@@ -49,9 +49,7 @@ def print_article(article)
   puts "  DATE: #{article.date.upcase}".colorize(:yellow)
   puts "\n"
   puts replace_inner_html_for_overview(article)
-  puts "\n"
-  puts "  SI: -- Press Enter For Main Menu --".colorize(:cyan)
-  puts "\n"
+  print_press_enter
 end
 
 # MOST LIKED
@@ -81,7 +79,7 @@ def print_most_liked_heading
   puts "\n"
 end
 
-# Astro Info
+# Astro Info Of The Day
 def print_aiod_heading
   puts "\n"
   puts "  ==================================================================================================================================".colorize(:cyan)
@@ -100,6 +98,8 @@ def print_aiod_article(title, date, overview, url)
   puts "  SI: -- Rigth click on the link below to to open a photo of the object in your browser.-- ".colorize(:cyan)
   puts "\n"
   puts "  "+"#{url}".underline
+  puts "\n"
+  print_press_enter
   puts "\n"
 end
 
@@ -123,13 +123,13 @@ end
 # ADD TO Favourite
 def print_add_to_favourites
   puts "\n"
-  puts "  SI: -- Added to your favourites --".colorize(:cyan)
+  puts "  SI: -- Added to your favourites --".colorize(:magenta)
   puts "\n"
   print_press_enter
 end
 
 def print_article_error
-  puts "  SI: -- Cannot Add This Article --".colorize(:magenta)
+  puts "  SI: -- Cannot add this article --".colorize(:magenta)
   print_press_enter
 end
 
@@ -157,7 +157,7 @@ end
 
 def print_article_not_removed
   puts "\n"
-  puts "  SI: -- Article not removed from favourites --".colorize(:cyan)
+  puts "  SI: -- Article not removed from favourites --".colorize(:magenta)
   puts "\n"
 end
 
@@ -226,14 +226,14 @@ end
 # choose by number
 def choose_by_number_error
   puts "\n"
-  puts "  SI: -- No Articles in here :( Add some plox!!! --".colorize(:yellow)
+  puts "  SI: -- No articles in here :( Add some plox!!! --".colorize(:yellow)
   print_press_enter
   puts "\n"
 end
 
 def print_press_enter
   puts "\n"
-  puts "  SI: -- Press Enter For Main Menu --".colorize(:cyan)
+  puts "  SI: -- Press Enter for Main menu --".colorize(:cyan)
   puts "\n"
 end
 
@@ -280,7 +280,7 @@ def article_iterator(user_num, len, article_arr, user)
         choose_by_number_error
         break
       else
-        puts "\n  AI: -- Enter Value Between 1 and #{len} --".colorize(:magenta)
+        puts "\n  AI: -- Enter a value between 1 and #{len} --".colorize(:magenta)
         user_input = gets.chomp
         user_num = user_input.to_i
       end
