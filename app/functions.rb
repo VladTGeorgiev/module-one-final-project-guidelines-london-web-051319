@@ -151,7 +151,6 @@ end
 
 
 def sign_in(username, user)
-<<<<<<< HEAD
    loop do
       if username == ""
         puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
@@ -166,24 +165,3 @@ def sign_in(username, user)
     end
   user
 end
-=======
-  loop do
-     user = find_user(username)
-     if username == ""
-       puts " SI: -- Please type your name to enter the SpaceShuttle".colorize(:cyan)
-       puts "\n"
-       username = gets.chomp
-     elsif username 
-        user = find_user(username)
-        username = user.username
-        user_greeting(username)
-        break
-     elsif !username
-        user = User.create(username: username)
-        user_greeting(username)
-        break
-     end
-   end
-  user
- end
->>>>>>> origin/dev
