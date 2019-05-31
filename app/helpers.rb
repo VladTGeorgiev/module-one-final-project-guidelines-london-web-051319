@@ -135,7 +135,7 @@ end
 
 def print_article_exist
   puts "\n"
-  puts "  SI: -- This is already in your collections of favourites --".colorize(:magenta)
+  puts "  SI: -- This is already in your collection of favourites --".colorize(:magenta)
   puts "\n"
   print_press_enter
   puts "\n"
@@ -183,7 +183,7 @@ end
 
 def print_search_error
   puts "\n"
-  puts "  SI: -- ERROR 404! No articles found with this search term. Please, use a different term. --".colorize(:color => :yellow, :background => :red).blink
+  puts "  "+"SI: -- ERROR 404! No articles found with this search term. Please, use a different term. --".colorize(:color => :yellow, :background => :red).blink
   puts "\n"
 end
 
@@ -292,7 +292,7 @@ end
 def replace_inner_html_for_overview(article)
   overview = article.overview
   overview.gsub!(/<[^>]*>/, "")
-  overview
+  "  "+"#{overview}"
 end
 
 # RUN
